@@ -24,7 +24,8 @@ void Warlock::introduce() const {
 void Warlock::learnSpell(ASpell* spell)
 {
     if(spell)
-        spells.insert(make_pair(spell->getName(), spell->clone()));
+        // spells.insert(make_pair(spell->getName(), spell->clone()));
+        spells[spell->getName()] = spell->clone();
 }
 
 void Warlock::forgetSpell(string spell)
