@@ -1,17 +1,14 @@
 #include "ASpell.hpp"
 
-ASpell::ASpell(const string& name, const string& effects)
-{
-    this->name = name;
-    this->effects = effects;
-}
+ASpell::ASpell(const std::string& name, const std::string& effects)
+    : _name(name), _effects(effects) {}
 
 const string& ASpell::getName() const{
-    return this->name;
+    return _name;
 }
 
 const string& ASpell::getEffects() const{
-    return this->effects;
+    return _effects;
 }
 
 void ASpell::launch(const ATarget& target) const{

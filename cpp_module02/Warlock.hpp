@@ -10,8 +10,8 @@ using namespace std;
 class Warlock
 {
     private:
-        string name;
-        string title;
+        string _name;
+        string _title;
         SpellBook spellBook;
         Warlock(const Warlock&);
         Warlock& operator=(const Warlock&) { return *this; }

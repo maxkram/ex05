@@ -7,8 +7,8 @@
 class Warlock
 {
     private:
-        string name;
-        string title;
+        string _name;
+        string _title;
         map<string,ASpell*> spells;
         Warlock(const Warlock&);
         Warlock& operator=(const Warlock&);

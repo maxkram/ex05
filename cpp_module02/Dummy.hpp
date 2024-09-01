@@ -6,7 +6,7 @@ class Dummy : public ATarget
 {
     public:
      Dummy();
-     ~Dummy();
+     virtual ~Dummy();
 
-     ATarget* clone() const;
+     virtual ATarget* clone() const;
 };

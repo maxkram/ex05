@@ -6,6 +6,6 @@ class Fwoosh : public ASpell
 {
     public:
         Fwoosh();
-        ~Fwoosh();
-        ASpell* clone() const;
+        virtual ~Fwoosh();
+        virtual ASpell* clone() const;
 };

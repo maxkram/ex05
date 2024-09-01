@@ -11,8 +11,8 @@ class ATarget;
 class ASpell
 {
     protected:
-        string name;
-        string effects;
+        string _name;
+        string _effects;
 
     public:
         ASpell(const string& name, const string& effects);

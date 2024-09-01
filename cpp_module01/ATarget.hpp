@@ -6,7 +6,7 @@ class ASpell;
 class ATarget
 {
     protected:
-        string type;
+        string _type;
 
     public:
         ATarget(const string& type);

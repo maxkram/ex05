@@ -6,15 +6,17 @@ using namespace std;
 class ATarget;
 #include "ATarget.hpp"
 
+
+
 class ASpell
 {
     protected:
-        string name;
-        string effects;
+        string _name;
+        string _effects;
 
     public:
         ASpell(const string& name, const string& effects);
-        virtual ~ASpell() {}
+        virtual ~ASpell() {};
         const string& getName() const;
         const string& getEffects() const;
         virtual ASpell* clone() const = 0;
