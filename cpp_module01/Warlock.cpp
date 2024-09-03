@@ -1,19 +1,19 @@
 #include "Warlock.hpp"
 
-Warlock::Warlock(const std::string& name, const std::string& title)
+Warlock::Warlock(std::string const & name, std::string const & title)
     : _name(name), _title(title) {
     cout << name << ": This looks like another boring day." << endl;
 }
 
-const string& Warlock::getName() const{
+string const & Warlock::getName() const{
     return _name;
 }
 
-const string& Warlock::getTitle() const{
+string const & Warlock::getTitle() const{
     return _title;
 }
 
-void Warlock::setTitle(const string& title){
+void Warlock::setTitle(string const & title){
     _title = title;
 }
 
@@ -37,7 +37,7 @@ void Warlock::forgetSpell(string spell)
    }
 }
 
-void Warlock::launchSpell(string spell, const ATarget& target)
+void Warlock::launchSpell(string spell, ATarget const & target)
 {
     map<string,ASpell*>::iterator it = spells.find(spell);
     if(it != spells.end())

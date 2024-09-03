@@ -9,15 +9,15 @@ class Warlock
     private:
         string _name;
         string _title;
-        Warlock(const Warlock&);
-        Warlock& operator=(const Warlock&);
+        Warlock(Warlock const &);
+        Warlock& operator=(Warlock const &);
 
     public:
-        Warlock(const string& name, const string& title);
+        Warlock(string const & name, string const & title);
         ~Warlock();
-        const string& getName() const;
-        const string& getTitle() const;
-        void setTitle(const string& name);
+        string const & getName() const;
+        string const & getTitle() const;
+        void setTitle(string const & title);
         void introduce() const;
 
 };

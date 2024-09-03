@@ -1,17 +1,18 @@
 #pragma once
-
+#include <iostream>
 class ASpell;
-#include "ASpell.hpp"
-
+using namespace std;
 class ATarget
 {
     protected:
         string _type;
 
     public:
-        ATarget(const string& type);
+        ATarget(string const & type);
         virtual ~ATarget() {};
-        const string& getType() const;
+        string const & getType() const;
+        void getHitBySpell(ASpell const & spell) const;
         virtual ATarget* clone() const = 0;
-        void getHitBySpell(const ASpell& spell) const;
 };
+
+#include "ASpell.hpp"

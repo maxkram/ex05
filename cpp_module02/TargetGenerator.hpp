@@ -8,14 +8,14 @@ class TargetGenerator
 {
     private:
         map<string,ATarget*> targets;
-        TargetGenerator(const TargetGenerator&);
-        TargetGenerator& operator=(const TargetGenerator&) { return *this; }
+        TargetGenerator(TargetGenerator const &);
+        TargetGenerator& operator=(TargetGenerator const &) { return *this; }
 
     public:
         TargetGenerator();
         ~TargetGenerator();
         void learnTargetType(ATarget* target);
-        void forgetTargetType(const string& target);
-        ATarget* createTarget(const string& target);
+        void forgetTargetType(string const & target);
+        ATarget* createTarget(string const & target);
 
 };

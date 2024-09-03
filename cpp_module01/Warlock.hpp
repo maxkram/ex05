@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ASpell.hpp"
-#include <utility>
+// #include <utility>
 #include <map>
 
 class Warlock
@@ -10,19 +10,19 @@ class Warlock
         string _name;
         string _title;
         map<string,ASpell*> spells;
-        Warlock(const Warlock&);
-        Warlock& operator=(const Warlock&);
+        Warlock(Warlock & const);
+        Warlock& operator=(Warlock & const);
     
     public:
-        Warlock(const string& name, const string& title);
+        Warlock(string const & name, string const & title);
         ~Warlock();
-        const string& getName() const;
-        const string& getTitle() const;
-        void setTitle(const string& name);
+        string const & getName() const;
+        string const & getTitle() const;
+        void setTitle(string const & name);
         void introduce() const;
 
         void learnSpell(ASpell* spell);
         void forgetSpell(string spell);
-        void launchSpell(string spell, const ATarget& target);
+        void launchSpell(string spell, ATarget const & target);
 
 };

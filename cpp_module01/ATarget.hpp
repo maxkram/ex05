@@ -1,7 +1,6 @@
 #pragma once
 
 class ASpell;
-#include "ASpell.hpp"
 
 class ATarget
 {
@@ -9,9 +8,11 @@ class ATarget
         string _type;
 
     public:
-        ATarget(const string& type);
+        ATarget(string const & type);
         virtual ~ATarget() {};
-        const string& getType() const;
+        string const & getType() const;
+        void getHitBySpell(ASpell const & spell) const;
         virtual ATarget* clone() const = 0;
-        void getHitBySpell(const ASpell& spell) const;
 };
+
+#include "ASpell.hpp"

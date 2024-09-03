@@ -10,14 +10,14 @@ class SpellBook
 {
     private:
         map<string,ASpell*> spells;
-        SpellBook(const SpellBook&);
-        SpellBook& operator=(const SpellBook&) {return *this;}
+        SpellBook(SpellBook const &);
+        SpellBook& operator=(SpellBook const &) {return *this;}
 
     public:
         SpellBook();
         ~SpellBook();
         void learnSpell(ASpell* spell);
-        void forgetSpell(const string& spell);
-        ASpell* createSpell(const string&);
+        void forgetSpell(string const & spell);
+        ASpell* createSpell(string const &);
 
 };

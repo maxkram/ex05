@@ -13,19 +13,19 @@ class Warlock
         string _name;
         string _title;
         SpellBook spellBook;
-        Warlock(const Warlock&);
-        Warlock& operator=(const Warlock&) { return *this; }
+        Warlock(Warlock const &);
+        Warlock& operator=(Warlock const &) { return *this; }
     
     public:
-        Warlock(const string& name, const string& title);
+        Warlock(string const & name, string const & title);
         ~Warlock();
-        const string& getName() const;
-        const string& getTitle() const;
-        void setTitle(const string& name);
+        string const & getName() const;
+        string const & getTitle() const;
+        void setTitle(string const & name);
         void introduce() const;
 
         void learnSpell(ASpell* spell);
-        void forgetSpell(const string& spell);
-        void launchSpell(string spell, const ATarget& target);
+        void forgetSpell(string const & spell);
+        void launchSpell(string spell, ATarget const & target);
 
 };

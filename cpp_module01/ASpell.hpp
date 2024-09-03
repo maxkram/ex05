@@ -4,9 +4,6 @@
 using namespace std;
 
 class ATarget;
-#include "ATarget.hpp"
-
-
 
 class ASpell
 {
@@ -15,10 +12,12 @@ class ASpell
         string _effects;
 
     public:
-        ASpell(const string& name, const string& effects);
+        ASpell(string const & name, string const & effects);
         virtual ~ASpell() {};
-        const string& getName() const;
-        const string& getEffects() const;
+        string const & getName() const;
+        string const & getEffects() const;
+        void launch(ATarget const & target) const;
         virtual ASpell* clone() const = 0;
-        void launch(const ATarget& target) const;
 };
+
+#include "ATarget.hpp"

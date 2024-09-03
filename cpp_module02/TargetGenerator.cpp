@@ -17,7 +17,7 @@ void TargetGenerator::learnTargetType(ATarget* target){
        targets[target->getType()] = target->clone();
 }
 
-void TargetGenerator::forgetTargetType(const string& target)
+void TargetGenerator::forgetTargetType(string const & target)
 {
     map<string,ATarget*>::iterator it = targets.find(target);
     if(it != targets.end()) {
@@ -26,7 +26,7 @@ void TargetGenerator::forgetTargetType(const string& target)
     }
 }
 
-ATarget* TargetGenerator::createTarget(const string& target)
+ATarget* TargetGenerator::createTarget(string const & target)
 {
     map<string,ATarget*>::iterator it = targets.find(target);
     return it != targets.end() ? it->second : NULL;
