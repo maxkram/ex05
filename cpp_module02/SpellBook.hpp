@@ -1,7 +1,6 @@
 #pragma once
 
 #include <map>
-// #include <utility>
 #include "ASpell.hpp"
 
 using namespace std;
@@ -11,7 +10,7 @@ class SpellBook
     private:
         map<string,ASpell*> spells;
         SpellBook(SpellBook const &);
-        SpellBook& operator=(SpellBook const &) {return *this;}
+        SpellBook& operator=(SpellBook const &);
 
     public:
         SpellBook();
